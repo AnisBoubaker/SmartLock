@@ -14,11 +14,12 @@ public:
   DebounceButton(int b_pin, unsigned long debounceTime,unsigned char inputMode);
   void setupButton();
   int read();
+  bool longPress(unsigned long duration);
 private:
   int _b_pin;
   unsigned long _debounceTime;
   unsigned char _inputMode;
   unsigned long _debounce;
-
+  unsigned long _pressDuration;
 };
 #endif
